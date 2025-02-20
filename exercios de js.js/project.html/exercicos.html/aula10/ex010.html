@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicios usando condição</title>
+    <style>
+        body {
+            background-color: darkcyan;
+            color: black;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+   <h1> Sistemas de multas</h1>
+  velocidade do carro: <input type="number" name="txtvel" id="txtvel"> km/h
+   <input type= "button" value=" verificar" onclick="calcular()">
+    <div id="resultado">
+    </div>
+    <script>
+        function calcular() {
+            var txtv = window.document.getElementById('txtvel')
+            var resultado = window.document.getElementById('resultado')
+            var vel = Number(txtv.value)
+            resultado.innerHTML = `<p>Sua velocidade atual é de <strong>${vel} km/h</strong></p>`
+            if (vel > 60) {
+                resultado.innerHTML += `<p> você ultrapassou o limite que é de 60 km/h , <strong>multado</strong></p>` 
+            }
+            resultado.innerHTML += `<p> Dirija sempre com sinto de segurança</p>`
+        } 
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos DOOM</title>
+</head>
+<style>
+    body {
+        background-color: blue;
+        color: black;
+    }
+    div#area {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px; 
+        background-color: rgb(27, 182, 27);
+        color:white;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+
+    }
+</style>
+<body>
+    <H1> trabalhando com doom no javascript com HTML e CSS</H1>
+    <div id="area">
+        interaja...
+    </div>
+    <script>
+         var A = window.document.getElementById('area');
+         A.addEventListener('click',clicar);
+         A.addEventListener('mauseenter', entrar);
+         A.addEventListener('mauseout',sair)
+
+    function clicar() {
+        A.innerText = 'Clicou!';
+        A.style.backgroundColor = 'red';   
+    }
+    function entrar() {
+       A.innerText = 'Entrou'; 
+    }
+    function sair() {
+        A.innerText = 'Sair';
+        A.style.backgroundColor ='green';
+    } 
+    </script>
+</body>
+</html>
